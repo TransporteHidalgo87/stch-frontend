@@ -72,7 +72,7 @@ export default function ReporteRealizadas() {
         format: 'json'
       }).toString();
 
-      const response = await fetch(`${API_BASE_URL}/reporte/inspecciones?${params}`, {
+      const response = await fetch(`${API_BASE_URL}reporte/inspecciones?${params}`, {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -155,13 +155,13 @@ export default function ReporteRealizadas() {
         const formData = new FormData();
         formData.append('logo', file);
 
-        response = await fetch(`${API_BASE_URL}/reporte/inspecciones?${commonParams}`, {
+        response = await fetch(`${API_BASE_URL}reporte/inspecciones?${commonParams}`, {
           method: 'POST',
           credentials: 'include',
           body: formData,
         });
       } else {
-        response = await fetch(`${API_BASE_URL}/reporte/inspecciones?${commonParams}`, {
+        response = await fetch(`${API_BASE_URL}reporte/inspecciones?${commonParams}`, {
           method: 'GET',
           credentials: 'include',
         });
